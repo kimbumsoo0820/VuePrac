@@ -8,7 +8,9 @@
     <h4  :style="스타일" > {{products}} 원룸</h4>
     <h3  :style="스타일"></h3>
     <p>{{ price[i] }} 만원</p>
+     <button @click="increase(i)">허위매물 신고</button>  <span> 신고수 : {{신고수[i]}} </span>
   </div>
+
   <div >
     <h4  :style="스타일" > {{products[0]}} 원룸</h4>
     <h3  :style="스타일"></h3>
@@ -27,7 +29,7 @@ export default {
   data(){
     return{
       price : [60,70,80],
-      신고수 : 0,
+      신고수 : [0,0,0],
       스타일 : 'color : blue',
       logo : '원룸샵',
       products : ['역삼동 원룸', '천호동 원룸', '마포구 원룸'],
@@ -36,8 +38,8 @@ export default {
     }
   },
   methods : {
-    increase() {
-      this.신고수++;
+    increase(index) {
+      this.신고수[index]++;
     }
   },
 
