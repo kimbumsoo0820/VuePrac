@@ -17,7 +17,7 @@
  
 </div>
   원룸샵
-  <div v-for="(products,i) in products" :key="i">
+  <div class="wrap" v-for="(products,i) in products" :key="i">
     <img src="./assets/groynes-4434535_1920.jpg" class ="room-img"/>
     <h4 class="RoomName" @click="modalStatusChange" :style="스타일" > {{products}} 원룸</h4>
     <h3  :style="스타일"></h3>
@@ -89,6 +89,11 @@ div {
   color: #2c3e50;
   
 }
+.wrap {
+  width: 500px;
+  margin: auto;
+  
+}
 
 .menu {
   background: darkslateblue;
@@ -105,5 +110,6 @@ div {
 }
 .RoomName {
   cursor: pointer;
+  
 }
 </style>
